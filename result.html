@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block title%}
+    Result
+{% endblock %}
+
+{% block body %}
+<table class="table my-4">
+    <thead>
+        <tr>
+            <th scope="col">Dob</th>
+            <th scope="col">Name</th>
+            <th scope="col">Physics</th>
+            <th scope="col">Chemistry</th>
+            <th scope="col">Maths</th>
+            <th scope="col">Computer Science</th>
+            <th scope="col">Total Marks</th>
+            <th scope="col">Percentage</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">{{dob}}</th>
+            <td>{{name}}</td>
+            <td>{{physics}}</td>
+            <td>{{chemistry}}</td>
+            <td>{{maths}}</td>
+            <td>{{computer science}}</td>
+            <td>{{total}}</td>
+            <td>{{percent}}</td>
+            {% if status == 'Pass' %}
+                <td><p class="btn btn-success">{{status}}</p></td>
+            {% else %}
+            <td><p class="btn btn-danger">{{status}}</p></td>
+            {% endif %}
+
+        </tr>
+
+    </tbody>
+</table>
+{% endblock %}

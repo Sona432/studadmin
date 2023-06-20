@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    Home   
+{% endblock %}
+
+{% block body %}
+<div class="container w-25">
+    <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+    <div class="mb-3 my-5">
+        <label for="dob" class="form-label">Dob</label>
+        <input type="integer" class="form-control" name="dob" id="dob">
+    </div>
+    <div class="mb-3">
+        <input type="submit" value="sssSee Result" class="btn btn-success"/>
+    </div>
+    </form>
+</div>
+{% endblock %}
